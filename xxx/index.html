@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <!-- https://www.mariouniverse.com/sprites-snes-smw/ -->
+  <!-- https://www.piskelapp.com/p/create/sprite -->
+
+  <!-- MUSIC -->
+  <!-- https://youtu.be/5bn3Jmvep1k?t=965 -->
+
+  <!-- https://www.mariouniverse.com/sprites-snes-smw/ -->
+
+
+<!-- efeito de iluminaçao -->
+  <!-- https://codepen.io/Since1979/pen/ExwqMGz -->
+
+  
+  <body>
+    <canvas id="canvasGround"></canvas>
+    <canvas id="canvas1"></canvas>
+    
+    <div class="mask" hidden></div>
+
+    <img id="playerStandingNormal" src="assets/player/player-standing-normal.png" hidden/>
+    <img id="playerStandingFire" src="assets/player/player-standing-fire.png" hidden/>
+
+    <img id="playerFallNormal" src="assets/player/player-fall-normal.png" hidden/>
+    <img id="playerFallFire" src="assets/player/player-fall-fire.png" hidden/>
+
+    <img id="playerJumpNormal" src="assets/player/player-jump-normal.png" hidden/>
+    <img id="playerJumpFire" src="assets/player/player-jump-fire.png" hidden/>
+
+    <img id="playerWalkingNormal" src="assets/player/player-walking-normal.png" hidden/>
+    <img id="playerWalkingFire" src="assets/player/player-walking-fire.png" hidden/>
+
+    <img id="playerAttackOneNormal" src="assets/player/player-attack-one-normal.png" hidden/>
+    <img id="playerAttackOneFire" src="assets/player/player-attack-one-fire.png" hidden/>
+
+    <img id="playerAttackTwoNormal" src="assets/player/player-attack-two-normal.png" hidden/>
+    <img id="playerAttackTwoFire" src="assets/player/player-attack-two-fire.png" hidden/>
+
+    <img id="playerAttackThreeNormal" src="assets/player/player-attack-three-normal.png" hidden/>
+    <img id="playerAttackThreeFire" src="assets/player/player-attack-three-fire.png" hidden/>
+    
+    <!-- background -->
+    <img id="cloud1" src="assets/background/clouds_1.png" hidden/>
+    <img id="cloud2" src="assets/background/clouds_2.png" hidden/>
+    <img id="cloud3" src="assets/background/clouds_3.png" hidden/>
+    <img id="plains" src="assets/background/plains.png" hidden/>
+    <img id="tres" src="assets/background/tres.png" hidden/>
+    
+    <img id="sky" src="assets/background/sky.png" hidden/>
+
+    <!-- enemy -->
+    <img id="soldierSkeletonIdle" src="assets/enemies/soldier-skeleton/soldier-skeleton-idle.png" hidden/>
+    <img id="soldierSkeletonWalking" src="assets/enemies/soldier-skeleton/soldier-skeleton-walking.png" hidden/>
+    <img id="soldierSkeletonAtack" src="assets/enemies/soldier-skeleton/soldier-skeleton-atack.png" hidden/>
+
+    <img id="snakeSoldierWalking" src="assets/enemies/snake-soldier/snake-waking.png" hidden/>
+    <img id="snakeSoldierIdle" src="assets/enemies/snake-soldier/snake-waking.png" hidden/>
+    <img id="snakeSoldierAtack" src="assets/enemies/snake-soldier/snake-atack.png" hidden/>
+    <img id="snakeSoldierHit" src="assets/enemies/snake-soldier/snake-hit.png" hidden/>
+
+    <img id="kaboom" src="assets/enemies/kaboom.png" hidden/>
+
+    <!-- scenery -->
+    <img id="treeOne" src="assets/adorns/tree1.png" hidden/>
+    <img id="sign" src="assets/adorns/sign.png" hidden/>
+
+    <img id="tree1" src="assets/adorns/springs/tree-1.png" hidden/>
+    <img id="tree2" src="assets/adorns/springs/tree-2.png" hidden/>
+    <img id="tree3" src="assets/adorns/springs/tree-3.png" hidden/>
+    <img id="tree4" src="assets/adorns/springs/tree-4.png" hidden/>
+
+    <img id="groundGrass" src="assets/ground/springs/grass.png" hidden/>
+    <img id="groundCave" src="assets/ground/springs/cave.png" hidden/>
+    <img id="groundCaveGround" src="assets/ground/springs/cave-ground.png" hidden/>
+
+    <img id="platform1" src="assets/ground/springs/platform-1.png" hidden/>
+    <img id="platform2" src="assets/ground/springs/platform-2.png" hidden/>
+    <img id="platform3" src="assets/ground/springs/platform-3.png" hidden/>
+
+    
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body style="margin: 5px; padding: 0;">
+    <div class="info">
+      <div class="info-line">
+        <input id="name"/>
+        <button id="save" class="btn">Save</button>
+        <select id="scenarioName">
+          <option></option>
+        </select>
+      </div>
+      <hr/>
+
+      <div class="info-line">
+        <div id="props"></div>
+      </div>
+      <hr/>
+        
+      <div class="info-line">
+        <div class="input-control">
+          <label for=""></label>
+
+          <button id="remove" class="btn">Remove</button>
+        </div>
+  
+        <div class="input-control">
+          <label for="">Ground</label>
+
+          <select id="collision-ground">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+
+        <div class="input-control">
+          <label for="">Wall</label>
+
+          <select id="collision-wall">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="adons-box">
+      <div>
+        <button id="toggle" class="btn">toggle</button>
+        <select id="palette-type">
+          <option value="ground">Ground</option>
+          <option value="enemies">Enemies</option>
+        </select>
+      </div>
+
+      <div id="toggle-container">
+        <div id="ground-container" >
+          <div class="adons-box-group">
+            <canvas class="canvas-item-grounds" id="signLeftCanvas"></canvas>
+            <canvas class="canvas-item-grounds" id="signRightCanvas"></canvas>
+            <canvas class="canvas-item-grounds" id="signUpCanvas"></canvas>
+            <canvas class="canvas-item-grounds" id="signDownCanvas"></canvas>
+            <canvas class="canvas-item-grounds" id="signDeathCanvas"></canvas>
+          </div>
+
+          <div class="adons-box-group">
+            <canvas class="canvas-item-grounds" id="tree1Canvas"></canvas>
+            <canvas class="canvas-item-grounds" id="tree2Canvas"></canvas>
+            <canvas class="canvas-item-grounds" id="tree3Canvas"></canvas>
+            <canvas class="canvas-item-grounds" id="tree4Canvas"></canvas>
+          </div>
+
+          <div class="adons-box-ground-group">
+            <div class="adons-box-group adons-box-ground">
+              <div>
+                <canvas class="canvas-item-grounds" id="groundGrass1Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundGrass2Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundGrass3Canvas"></canvas>
+              </div>
+              <div>
+                <canvas class="canvas-item-grounds" id="groundGrass4Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundGrass5Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundGrass6Canvas"></canvas>
+              </div>
+              <div>
+                <canvas class="canvas-item-grounds" id="groundGrass7Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundGrass8Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundGrass9Canvas"></canvas>
+              </div>
+            </div>
+
+            <div class="adons-box-group adons-box-ground">
+              <div>
+                <canvas class="canvas-item-grounds" id="platformOne1Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="platformOne2Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="platformOne3Canvas"></canvas>
+              </div>
+
+              <div>
+                <canvas class="canvas-item-grounds" id="platformTwo1Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="platformTwo2Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="platformTwo3Canvas"></canvas>
+              </div>
+
+              <div>
+                <canvas class="canvas-item-grounds" id="platformThreeCanvas"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="adons-box-ground-group">
+
+            <div class="adons-box-group adons-box-ground">
+              <div>
+                <canvas class="canvas-item-grounds" id="groundCave1Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCave2Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCave3Canvas"></canvas>
+              </div>
+              <div>
+                <canvas class="canvas-item-grounds" id="groundCave4Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCave5Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCave6Canvas"></canvas>
+              </div>
+              <div>
+                <canvas class="canvas-item-grounds" id="groundCave7Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCave8Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCave9Canvas"></canvas>
+              </div>
+            </div>
+
+            <div class="adons-box-group adons-box-ground">
+              <div>
+                <canvas class="canvas-item-grounds" id="groundCaveGround1Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCaveGround2Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCaveGround3Canvas"></canvas>
+              </div>
+              <div>
+                <canvas class="canvas-item-grounds" id="groundCaveGround4Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCaveGround5Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCaveGround6Canvas"></canvas>
+              </div>
+              <div>
+                <canvas class="canvas-item-grounds" id="groundCaveGround7Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCaveGround8Canvas"></canvas>
+                <canvas class="canvas-item-grounds" id="groundCaveGround9Canvas"></canvas>
+              </div>
+            </div>
+          </div>
+
+            
+
+
+            
+          </div>
+        </div>
+
+        <div id="enemies-container" hidden>
+          <div class="adons-box-ground-group">
+            <div class="adons-box-group adons-box-ground">
+              <div>
+                <canvas class="canvas-item-enemies" id="skeletonSoldierCanvas"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <img id="sign" src="assets/adons/sign.png" hidden/>
+    <img id="tree1" src="assets/adons/springs/tree-1.png" hidden/>
+    <img id="tree2" src="assets/adons/springs/tree-2.png" hidden/>
+    <img id="tree3" src="assets/adons/springs/tree-3.png" hidden/>
+    <img id="tree4" src="assets/adons/springs/tree-4.png" hidden/>
+
+    <img id="groundGrass" src="assets/ground/springs/grass.png" hidden/>
+    <img id="groundCave" src="assets/ground/springs/cave.png" hidden/>
+    <img id="groundCaveGround" src="assets/ground/springs/cave-ground.png" hidden/>
+
+    <img id="platform1" src="assets/ground/springs/platform-1.png" hidden/>
+    <img id="platform2" src="assets/ground/springs/platform-2.png" hidden/>
+    <img id="platform3" src="assets/ground/springs/platform-3.png" hidden/>
+
+
+    <img id="skeletonSoldier" src="assets/enemies/skeletonSoldier.png" hidden/>
+
+    
+    <script type="module" src="main.js"></script>
+    <script type="module" src="assetsPalette.js"></script>
+    <script type="module" src="handleHtml.js"></script>
+  </body>
+</html>

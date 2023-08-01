@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: "border-box";
+}
+
+input {
+  height: 30px;
+  border-radius: 7px;
+  border: solid 1px #bbb;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+select {
+  height: 30px;
+  border-radius: 7px;
+  border: solid 1px #bbb;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  background: white;
+}
+
+input,
+select:focus-visible {
+  outline: none;
+  border: solid 1px #898484;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: solid 1px lightgrey;
+}
+
+.btn {
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 7px;
+  border: solid 1px #bbb;
+  background: white;
+  font-size: 14px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.input-control label {
+  height: 20px;
+}
+
+#canvas {
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+#canvasGround {
+  display: none;
+}
+
+.adons-box {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  flex-direction: column;
+
+  position: fixed;
+  left: 10px;
+  background: #e5e5e5;
+  top: 10px;
+}
+
+.adons-box canvas {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border: solid 1px #d9d9d9;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.adons-box-ground {
+  display: block;
+}
+
+.adons-box-ground div {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.adons-box-ground-group {
+  display: flex;
+  gap: 5px;
+}
+
+.info {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+
+  background: #e5e5e5;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px #d5d5d5;
+}
+
+.info .info-line {
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.info .info-line:first-child {
+  margin-bottom: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.adons-box .btn {
+  width: 100px;
+}
